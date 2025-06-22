@@ -1,6 +1,0 @@
-Day 1:- 
-Enter Date (DD/MM/YYYY) :- Day 2:-
-Enter Date (DD/MM/YYYY) :- 
-
-Date is :-4201136/6422356/4201227
-Date is :--2/6422280/2004255341

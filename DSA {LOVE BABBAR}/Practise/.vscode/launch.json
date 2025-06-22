@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/divyansh/Desktop/DSA/DSA {LOVE BABBAR}/Practise",
+      "program": "/Users/divyansh/Desktop/DSA/DSA {LOVE BABBAR}/Practise/build/Debug/outDebug"
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+# Assignment 2 - Pattern Problems (Name - Divyansh!)
+
+1.   A
+     B B
+     C C C
+     D D D D
+     E E E E E
+
+Sol. - 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    char ch = 'A';
+
+    cout << "Enter Number : ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout<<ch<<" ";
+        }
+        cout<<endl;
+        ch++;
+    }
+    return 0;
+}
+
+
+2.  A 
+    B C 
+    D E F 
+    G H I J 
+    K L M N O 
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    char ch = 'A';
+
+    cout << "Enter Number : ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << ch << " ";
+            ch++;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+3.   1 2 3 4 5
+             A
+             B
+             C
+             D
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    char ch = 'A';
+
+    cout << "Enter Number : ";
+    cin >> n;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (i == 1)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                cout << j << " ";
+            }
+            cout<<endl;
+        }
+        for (int space = 1; space < n; space++)
+        {
+            cout << "  ";
+        }
+        for(int k = 1; k<=1 ; k++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+4.  1 2 3 4 5
+           A
+         B
+       C
+     D
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    char ch = 'A';
+
+    cout << "Enter Number : ";
+    cin >> n;
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (i == 0)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                cout << j << " ";
+            }
+            cout << endl;
+        }
+        for (int space = n - i - 1 ; space != 0; space--)
+        {
+            cout << "  ";
+        }
+        for (int k = 1; k <= 1; k++)
+        {
+            cout << ch << " ";
+            ch++;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+5.  0 1 1 1 0
+    1 1 1 1 1
+    1 1 0 1 1
+    1 1 1 1 1
+    0 1 1 1 0
+
+Sol. - 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            if ((i == 1 || i == 5) && (j == 1 || j == 5)) {
+                cout << "0 ";
+            }
+            else if (i == 3 && j == 3) {
+                cout << "0 ";
+            }
+            else {
+                cout << "1 ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+6.  1
+    * *
+    2 3 4
+    * * * * 
+    5 6 7 8 9
+    * * * * * * 
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int count=1;
+    for (int i = 0; i <= 6; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % 2 == 0)
+            {
+                cout << "*" << " ";
+            }
+            else{
+                cout<<count<<" ";
+                count++;
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+7. *
+   E F
+   * * *
+   G H I J
+   * * * * *
+   K L M N O P
+
+Sol. -
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    char count = 'E';
+    for (int i = 0; i <= 6; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (i % 2 == 0)
+            {
+                cout << count << " ";
+                count++;
+            }
+            else
+            {
+                cout << "*" << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+8.  A B C D E
+    F       G
+    H       I
+    J       K
+    L M N O P
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char ch = 'A';
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if (i == 0 || i == 4)
+            {
+                cout << ch << " ";
+                ch++;
+            }
+            else
+            {
+                if (j == 1 || j == 5)
+                {
+                    cout << ch << " ";
+                    ch++;
+                }
+                else
+                {
+                    cout << "  ";
+                }
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+9.      A
+        B
+    C D E F G
+        H
+        I
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char ch = 'A';
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if (i == 2)
+            {
+                cout << ch << " ";
+                ch++;
+            }
+            else
+            {
+                if (j == 3)
+                {
+                    cout << ch << " ";
+                    ch++;
+                }
+                else
+                {
+                    cout << "  ";
+                }
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+10.     1
+       2 3
+      4 5 6
+     7 8 9 10
+
+Sol. - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int count = 1;
+
+    for (int i = 1; i <= 4; i++)
+    {
+        for(int space=4 ; i<=space ; space--)
+        {
+            cout<<" ";
+        }
+        for (int j = 1; j <= i; j++)
+        {
+            cout<<count<<" ";
+            count++;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+11. A                 B 
+    C D             E F
+    G   H         I   J
+    K     L     M     N
+    O       P Q       R
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char ch = 'A';
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            if (j == i || j == 10 - i - 1 || j == 0 || j == 10 - 1)
+            {
+                cout << ch++ << " ";
+            }
+            else
+            {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+12.   1
+      0 1
+      1 0 1
+      0 1 0 1
+      1 0 1 0 1
+
+Sol. - 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) {
+            if(i%2==0){
+                if(j%2==0){
+                    cout<<"1 ";
+                }
+                else{
+                    cout<<"0 ";
+                }
+            }
+            else{
+                if(j%2==0){
+                    cout<<"0 ";
+                }
+                else{
+                    cout<<"1 ";
+                }
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+13.  1 2 3 4 5
+     *
+     *
+     A B C D E
+     *
+     *
+     *
+     *
+
+Sol. - 
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char ch='A';
+    for (int i = 1; i <= 5; i++)
+    {
+        if (i == 1)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                cout << j << " ";
+            }
+            cout<<endl;
+        }
+        if (i == 3)
+        {
+            for (int j = 1; j <= 5; j++)
+            {
+                cout << ch << " ";
+                ch++;
+            }
+            cout<<endl;
+        }
+        for (int k = 1; k <= 1; k++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+14.  1  
+     C  D
+     4  5  6
+     H  I  J  K
+     11  12  13  14  15
+     Q  R  S  T  U  V
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char ch = 'B';
+    int count=1;
+    for (int i = 1; i <= 6; i++)
+    {
+        if (i % 2 == 0)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                cout<<ch<<" ";
+                ch++;
+                count++;
+            }
+        }
+        else
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                cout<<count<<" ";
+                count++;
+                ch++;
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+15.  a     1     A
+        b  2  B
+     *  *  3  *  * 
+        C  4  c
+     D     5     d
+
+Sol. - 
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char lowerCh = 'a';
+    char upperCh = 'A';
+    int count = 1;
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = 1; j <= 5; j++)
+        {
+            if ((j == 2 || j == 4) && (i == 1 || i == 5))
+            {
+                cout << "  ";
+            }
+            if ((j == 1 || j == 5) && (i == 2 || i == 4))
+            {
+                cout << "  ";
+            }
+            if (i == 3)
+            {
+                if (j != 3)
+                {
+                    cout << "* ";
+                }
+            }
+            if (j == 3)
+            {
+                cout << i << " ";
+            }
+            if (i == j && j != 3)
+            {
+                cout << lowerCh << " ";
+                lowerCh++;
+            }
+            if (((i == 1 && j == 5) || (i == 2 && j == 4) || (i == 4 && j == 2) || (i == 5 && j == 1)) && j != 3)
+            {
+                cout << upperCh << " ";
+                upperCh++;
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
+

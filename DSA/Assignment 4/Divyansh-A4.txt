@@ -1,0 +1,205 @@
+1.  Write a program in C++ to find the last prime number that occurs before the entered number.  
+
+Sol. - 
+
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n)
+{
+    for (int j = 2; j < n; j++)
+    {
+        if (n % j == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main()
+{
+    int num;
+    cout << "Enter Number : ";
+    cin >> num;
+
+    for (int i = num - 1; i > 0; i--)
+    {
+        if (isPrime(i))
+        {
+            cout << "Last Prime = " << i << endl;
+            break;
+        }
+    }
+
+    return 0;
+}
+  
+
+2.  Write a program in C++ to find the Greatest Common Divisor (GCD) of two numbers.
+
+Sol. - #include <iostream>
+using namespace std;
+
+int main()
+{
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    for (int i = min(num1, num2); i >= 1; i--)
+    {
+        if (num1 % i == 0 && num2 % i == 0)
+        {
+            cout << "GCD of " << num1 << " and " << num2 << " = " << i << endl;
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+  
+3.  Write a program in C++ to find the LCM of any two numbers.  
+
+Sol. - 
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b)
+{
+    while (b != 0)
+    {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int lcm(int a, int b)
+{
+    return (a * b) / gcd(a, b);
+}
+
+int main()
+{
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    int result = lcm(num1, num2);
+
+    cout << "LCM of " << num1 << " and " << num2 << " is: " << result << endl;
+
+    return 0;
+}
+
+
+  
+4.  Write a program in C++ to enter any number and print all factors of the number.
+
+Sol. - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    cout << "Enter Number : ";
+    cin >> num;
+
+    cout<<"Factors of "<<num<<" = ";
+
+    for (int i = 1; i <= num; i++)
+    {
+        if (num % i == 0)
+        {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
+}
+
+
+5.   What will be the output ?
+float f = 10.5;  
+float p = 2.5;  
+float* ptr = &f;  
+(*ptr)++;  
+*ptr = p;  
+cout << *ptr << “ “ << f << “ “ << p; 
+
+Sol. - 2.5 2.5 2.5
+
+
+6.  Write a program in C++ to find the number and sum of all integers between 100 and 200 which are divisible by 9. 
+
+Sol. - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n1 = 100, n2 = 200;  
+    int sum = 0;            
+    int count = 0;          
+
+    for (int i = n1; i <= n2; i++)
+    {
+        if (i % 9 == 0) 
+        {
+            sum += i;   
+            count++;    
+        }
+    }
+
+    cout << "Count of numbers divisible by 9 between 100 and 200: " << count << endl;
+    cout << "Sum of numbers divisible by 9 between 100 and 200: " << sum << endl;
+
+    return 0;
+}
+
+7.  Write a C++ program to input electricity unit charge and calculate the total electricity bill according to 
+the given condition:  
+      For first 50 units Rs. 0.50/unit  
+      For next 100 units Rs. 0.75/unit  
+      For next 100 units Rs. 1.20/unit  
+      For unit above 250 Rs. 1.50/unit 
+
+Sol. - 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int units;
+    cout << "Unit Charges = ";
+    cin >> units;
+
+    double charge = 0;
+
+    if (units <= 50)
+    {
+        charge = units * 0.50;
+    }
+    else if (units <= 150)
+    {
+        charge = 50 * 0.50 + (units - 50) * 0.75;
+    }
+    else if (units <= 250)
+    {
+        charge = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
+    }
+    else
+    {
+        charge = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
+    }
+
+    cout << "Charge for " << units << " units = Rs. " << charge << endl;
+
+    return 0;
+}
+
