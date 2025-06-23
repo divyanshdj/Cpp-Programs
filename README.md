@@ -33,9 +33,9 @@ Welcome to my fully organized **C/C++ Code Repository**, built over 2+ years of 
 
 ## 💡 Ideal For
 
-* College students prepping for placements
 * DSA & OOPs revision for interviews
 * Systematic problem-solving in C/C++
+* Currently Under Progress....
 
 ---
 
