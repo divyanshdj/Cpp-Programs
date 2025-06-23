@@ -1,34 +1,32 @@
 # 💻 C/C++ DSA & Core Concepts Archive
 
-Welcome to my fully organized **C/C++ Code Repository**, built over 2 years of hands-on coding and learning. It’s structured to help with:
+Welcome to my fully organized **C/C++ Code Repository**, built over 2+ years of hands-on coding, practice, and interview preparation. This archive is structured to help you with:
 
-- 📌 Interview preparation
-- 🧠 Quick topic revision
-- ⚙️ Practical coding
-- 🔁 Daily problem solving
-
----
-
-## 📁 Folder Overview
-
-| Folder | Description |
-|--------|-------------|
-| `dsa/` | Data Structures & Algorithms with theory, problems, and C/C++ code |
-| `oops/` | Object-Oriented Programming concepts and implementations in C++ |
-| `practice_programs/` | Older basic logic programs + file handling and exceptions |
-| `projects/` | Small projects like games and utilities (rock-paper-scissors, etc.) |
-| `recursion_concept/` | Ongoing recursion code from YouTube (CodeStoryWithMIK) |
-| `README.md` | This file — main index to the entire repo |
+- 📌 **Interview Preparation**
+- 🧠 **Quick Concept Revision**
+- ⚙️ **DSA & OOP Mastery**
+- 🔁 **Daily Problem Solving**
 
 ---
 
-## 🚀 How to Use This Repo
+| 📁 Folder Name | 🔍 Description |
+|--------------------|----------------|
+| [**dsa/**](./dsa/) | Core DSA topics with theory and C/C++ code (Arrays, Strings, Recursion, etc.) |
+| [**oops/**](./oops/) | OOP concepts in C++ with examples (Inheritance, Polymorphism, etc.) |
+| [**practice_programs/**](./practice_programs/) | Basic C/C++ programs including file and exception handling |
+| [**projects/**](./projects/) | Mini console projects like Rock Paper Scissors |
+| [**recursion_concept/**](./recursion_concept/) | Recursion patterns from CodeStoryWithMIK playlist |
 
-1. Pick a topic folder (like `dsa/Arrays/`)
-2. Read the `README.md` for the concept
-3. Open any `.cpp` file and run:
+---
+
+## 🚀 How to Use This Repository
+
+1. **Choose a topic** folder from above.
+2. Open the folder and read its `README.md` for theory and structure.
+3. Run any `.cpp` file using:
    ```bash
    g++ filename.cpp -o run
    ./run
 ---
-> ⭐ If this repo helps you, leave a star and share with your peers!
+
+> ⭐ If this repo helps you, **star it and share** it with your friends preparing for placements!
