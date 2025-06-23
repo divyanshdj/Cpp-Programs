@@ -1,65 +1,73 @@
 #include <iostream>
 using namespace std;
 
-class Bubble
+void inputArr(int arr[], int size)
 {
-private:
-    int n, temp;
-    int arr[20];
-
-public:
-    void getArray()
+    for (int i = 0; i < size; i++)
     {
-        cout << "Enter Size of Array: ";
-        cin >> n;
-
-        if (n < 1 || n > 20)
-        {
-            cout << "Invalid array size. Please enter a size between 1 and 20." << endl;
-            exit(1);
-        }
-
-        cout << "Enter " << n << " Array Elements: ";
-        for (int i = 0; i < n; i++)
-        {
-            cin >> arr[i];
-        }
+        cin >> arr[i];
     }
+}
 
-    void sortArray()
+void printArr(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
     {
-        for (int i = 0; i < n - 1; i++)
+        cout << arr[i] << " ";
+    }
+}
+
+void swapArr(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+void bubble_sort(int arr[], int size)
+{
+    for (int i = 1; i <= size - 1; i++)
+    {
+        int didSwap = 0; 
+        for (int j = 0; j <= i; j++)
         {
-            for (int j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1])
             {
-                if (arr[j] > arr[j + 1])
-                {
-                    temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
+                swapArr(arr[j], arr[j + 1]);
+                didSwap = 1;
             }
         }
-    }
-
-    void putArray()
-    {
-        cout << "Sorted Array: ";
-        for (int i = 0; i < n; i++)
+        if (didSwap == 0) //Best case if Array is Already Sorted -> Time Complexity : O(N)
         {
-            cout << " " << arr[i];
+            break;
         }
-        cout << endl;
     }
-};
+}
 
 int main()
 {
-    Bubble obj;
-    obj.getArray();
-    obj.sortArray();
-    cout << endl
-         << "This is the Sorted Array:" << endl;
-    obj.putArray();
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    int arr[size];
+
+    cout << "Enter the elements of the array: ";
+    inputArr(arr, size);
+
+    cout << "Original array: ";
+    printArr(arr, size);
+
+    cout << "\n";
+
+    bubble_sort(arr, size);
+
+    cout << "Sorted array in ascending order: ";
+    printArr(arr, size);
+
     return 0;
 }
+
+// Time Complexity :
+// Worst & Average Case -> O(N^2)
+// Best Case -> O(N)
