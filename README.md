@@ -11,7 +11,7 @@ Welcome to my fully organized **C/C++ Code Repository**, built over 2+ years of 
 
 | 📁 Folder Name | 🔍 Description |
 |--------------------|----------------|
-| [**dsa/**](./dsa/) | Core DSA topics with theory and C/C++ code (Arrays, Strings, Recursion, etc.) |
+| [**dsa/**](https://github.com/divyanshdj/Cpp-Programs/tree/main/DSA#readme) | Core DSA topics with theory and C/C++ code (Arrays, Strings, Recursion, etc.) |
 | [**oops/**](./oops/) | OOP concepts in C++ with examples (Inheritance, Polymorphism, etc.) |
 | [**practice_programs/**](./practice_programs/) | Basic C/C++ programs including file and exception handling |
 | [**projects/**](./projects/) | Mini console projects like Rock Paper Scissors |
